@@ -1,0 +1,136 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Get Process Navigate HappyFresh for First Time",
+        "description": "",
+        "id": "navigate-into-web-happyfresh;get-process-navigate-happyfresh-for-first-time",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6050551783,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "prepara and navigate",
+            "match": {
+              "location": "BeginningHappyFreshStep.prepara_and_navigate()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 63170112970,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Open Happyfresh for validate URL",
+            "match": {
+              "location": "BeginningHappyFreshStep.Website_HappyFresh_Has_Been_Opened()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 40949286,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Get URL and equals with \"https://www.happyfresh.id/\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.happyfresh.id/",
+                  "offset": 25
+                }
+              ],
+              "location": "BeginningHappyFreshStep.Get_URL_and_equals_with(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 10814447365,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "Website HappyFresh Opened and Ready",
+            "match": {
+              "location": "BeginningHappyFreshStep.Website_HappyFresh_ready()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 35610827127,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "Searching FarmMarket on Carousel and Click",
+            "match": {
+              "location": "BeginningHappyFreshStep.Navigate_FarmMarket_onCarousel()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 327448734,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Website FarmMarket Has Been Opened",
+            "match": {
+              "location": "BeginningHappyFreshStep.Website_FarmMarket_Opened()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 303891524,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Searching Button Login and Click",
+            "match": {
+              "location": "BeginningHappyFreshStep.Search_Button_Login()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 96161661,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "username and password show",
+            "match": {
+              "location": "BeginningHappyFreshStep.Prompt_Login_Visible()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1191965962,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "filled it",
+            "match": {
+              "location": "BeginningHappyFreshStep.do_Login_FarmMarket()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Navigate into Web HappyFresh",
+    "description": "",
+    "id": "navigate-into-web-happyfresh",
+    "keyword": "Feature",
+    "uri": "BeginningHappyFresh.feature"
+  }
+]

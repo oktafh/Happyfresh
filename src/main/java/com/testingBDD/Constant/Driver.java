@@ -17,7 +17,7 @@ public class Driver {
 
     public WebDriver StartNavigate(WebDriver control,String URL){
         control.manage().window().maximize();
-        control.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+        //control.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
         control.navigate().to(URL);
         return control;
     }

@@ -12,6 +12,7 @@ public class ElHappyFresh {
     protected String TextElement;
     protected String CSSElement;
     protected String CategoryElement;
+    protected Integer LengthCarouselSlider;
 
     public ElHappyFresh(String keyword){
         if (keyword.equals("carousel")){
@@ -28,7 +29,7 @@ public class ElHappyFresh {
     public ElHappyFresh _carouselSlider(){
         this.ClassElement = "stores-carousel-wrapper";
         this.IdElement = "carousel-52";
-        this.CSSElement = "div[class=\"stores-carousel-wrapper\"]";
+        this.CSSElement = "div[class=\"stores-carousel-each\"]";
         return this;
     }
 

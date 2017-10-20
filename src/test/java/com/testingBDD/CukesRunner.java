@@ -8,7 +8,11 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features={"src/test/resources"}
+        features={"src/test/resources"},
+        format = {"pretty","html:target/site/cucumber-pretty","json:target/cucumber.json"},
+        tags = {"~@ignore"}
 )
 
-public class CukesRunner { }
+public class CukesRunner {
+
+}

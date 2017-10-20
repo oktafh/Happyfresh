@@ -19,6 +19,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 import java.lang.Exception;
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.junit.Assert.*;
 
 /**
@@ -34,6 +37,7 @@ public class BeginningHappyFreshStep {
     public Engine engine;
     public String Xpath;
     public String CSSSelector;
+    public List collection;
 
     @Given("^prepara and navigate$")
     public void prepara_and_navigate() {
@@ -73,6 +77,9 @@ public class BeginningHappyFreshStep {
             //engine.WaitElementByCss(wait,"div[class=\"stores-carousel-wrapper\"]");
             CSSSelector = engine.Carousel(ElHappyFresh.class)._carouselSlider().getCSSElement();
             engine.WaitElementByCss(wait,CSSSelector);
+            collection = new ArrayList<WebElement>();
+            collection.clear();
+            collection = control.findElements(By.cssSelector(CSSSelector));
         }
         catch (Exception e) {
             e.printStackTrace();
@@ -87,7 +94,7 @@ public class BeginningHappyFreshStep {
             element = control.findElement(By.cssSelector(CSSSelector));
         }
         catch (ElementNotVisibleException e) {
-            for (int i = 1; i< 10; i++){
+            for (int i = 1; i< collection.size(); i++){
                 //element = control.findElement(By.cssSelector("div[class=\"stores-carousel-prev\"] img[data-pointer=\"5\"]"));
                 //element.click();
                 //element.clear();
@@ -97,16 +104,17 @@ public class BeginningHappyFreshStep {
                 element.click();
                 element.clear();
                 CSSSelector = engine.Carousel(ElHappyFresh.class)._carouselFarmMarket().getCSSElement();
+                engine.WaitElementByCss(wait,CSSSelector);
                 element = control.findElement(By.cssSelector(CSSSelector));
-
                 if (element.equals(null)) {
                     i = i+1;
                 }
                 else
-                    i=10;
+                    i=collection.size();
             }
         }
         element.click();
+        collection.clear();
 
     }
 
